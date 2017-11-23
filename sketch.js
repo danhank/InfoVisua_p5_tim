@@ -10,12 +10,16 @@ var acc; //vector for acceleration
 var rythm = 4;
 
 //variable storing dynamic threshold
-var thresh = dynamicThreshold();
+var thresh = dynamicThreshold(200);
 
+var slider;
 
 function setup() {
   createCanvas(768,1024);
   frameRate(30);
+
+  slider = createSlider(0,0.5,0.01,0);
+  slider.position(20,20);
 
   var startTempo;
   startTempo = 2;
@@ -74,10 +78,10 @@ function draw() {
 
 // messurement & data
 /* --------------------------------- */
-  var delta_relative = muse.get('/muse/elements/delta_relative');
+ // var delta_relative = muse.get('/muse/elements/delta_relative');
 
   // .getAlpha() liefert durchschnittswert vom alpha-wert aller elektroden mit guten kontakt
-  var _alpha = muse.getAlpha();
+  var _alpha = slider.value();//muse.getAlpha();
   //console.log('alpha ist so viel: '+_alpha);
   var _beta = muse.getBeta();
   //console.log('beta ist so viel: '+_beta);
