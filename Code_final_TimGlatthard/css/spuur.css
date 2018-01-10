@@ -1,0 +1,26 @@
+button{
+  padding: 0.5em 1em;
+  color: #ffffff;
+  font-size: 1.8em;
+  font-family: 'CovesLight';
+  letter-spacing: 10px;
+
+  //border: 1px solid #762132;
+  background-color: #762132;
+}
+
+
+button.restartButton{
+  font-size: 1.1em;
+}
+
+
+@font-face {
+    font-family: 'CovesBold';
+    src: url('../assets/Coves Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CovesLight';
+    src: url('../assets/Coves Light.otf') format('opentype');
+}
